@@ -1,9 +1,14 @@
 package com.fangfa.projecttemplate.controller;
 
-import com.fangfa.projecttemplate.MyException.MessageException;
 import com.fangfa.projecttemplate.annotation.Operateion;
+import com.fangfa.projecttemplate.bean.User;
 import com.fangfa.projecttemplate.service.TestService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,17 +19,30 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/test")
+@Api(value="测试controller")
 public class TestController {
 
     @Autowired
     TestService testService;
 
-    @RequestMapping("/a")
+    @GetMapping("/a")
     @Operateion("测试操作1")
-    public Object test() throws Exception {
-        testService.test();
+    @ApiOperation(value = "测试swagger",notes = "根据url的id来获取用户详细信息") //方法说明
+    @ApiImplicitParam(name = "id",value = "用户id",required = true,dataType = "Integer")
+    public Object test(Integer id) throws Exception {
+//        testService.test();
         return "测试";
     }
+
+
+
+    @PostMapping("/b")
+    @ApiOperation(value = "保存用户",notes = "啦啦啦啦啦")
+    @ApiImplicitParam(name = "user",value = "用户对象",required = true,dataType = "user")
+    public User getUser(User user){
+        return null;
+    }
+
 
 
 
