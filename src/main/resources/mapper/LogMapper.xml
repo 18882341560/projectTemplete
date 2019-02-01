@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fangfa.projecttemplate.dao.LogMapper">
+
+
+    <parameterMap id="exceptionLog" type="com.fangfa.projecttemplate.bean.log.ExceptionLog"/>
+    <resultMap id="exceptionLog" type="com.fangfa.projecttemplate.bean.log.ExceptionLog"/>
+
+    <parameterMap id="operate" type="com.fangfa.projecttemplate.bean.log.OperateionLog"/>
+    <resultMap id="operate" type="com.fangfa.projecttemplate.bean.log.OperateionLog"/>
+
+    <insert id="insertExceptionLog" parameterMap="exceptionLog">
+        insert into log_exception (message,requestUrl,descInfo,parameter,dateTime)
+        values (#{message},#{requestUrl},#{descInfo},#{parameter},#{dateTime})
+    </insert>
+
+    <insert id="insertOperationLog" parameterMap="operate">
+       insert into log_operation(operateUserId,operateMethod,operateUrl,parameter,operateDateTime,operateExplain)
+       values (#{operateUserId},#{operateMethod},#{operateUrl},#{parameter},#{operateDateTime},#{operateExplain})
+    </insert>
+
+
+</mapper>

@@ -1,6 +1,7 @@
 package com.fangfa.projecttemplate.controller;
 
 import com.fangfa.projecttemplate.MyException.MessageException;
+import com.fangfa.projecttemplate.annotation.Operateion;
 import com.fangfa.projecttemplate.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +20,7 @@ public class TestController {
     TestService testService;
 
     @RequestMapping("/a")
+    @Operateion("测试操作1")
     public Object test() throws Exception {
         testService.test();
         return "测试";
