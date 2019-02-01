@@ -1,0 +1,8 @@
+com\fangfa\projecttemplate\controller\TestController.class
+com\fangfa\projecttemplate\service\TestService.class
+com\fangfa\projecttemplate\ProjectTemplateApplication.class
+com\fangfa\projecttemplate\MyException\MessageException.class
+com\fangfa\projecttemplate\MyException\MyControllerAdvice.class
+com\fangfa\projecttemplate\conf\CustomProperties.class
+com\fangfa\projecttemplate\service\impl\TestServiceImpl.class
+META-INF\spring-configuration-metadata.json

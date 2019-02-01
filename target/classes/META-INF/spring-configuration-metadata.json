@@ -1,0 +1,28 @@
+{
+  "groups": [
+    {
+      "name": "custom.properties",
+      "type": "com.fangfa.projecttemplate.conf.CustomProperties",
+      "sourceType": "com.fangfa.projecttemplate.conf.CustomProperties"
+    },
+    {
+      "name": "spring.datasource",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.fangfa.projecttemplate.ProjectTemplateApplication",
+      "sourceMethod": "dataSource()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "custom.properties.database",
+      "type": "java.lang.String",
+      "sourceType": "com.fangfa.projecttemplate.conf.CustomProperties"
+    },
+    {
+      "name": "custom.properties.save-files-folder",
+      "type": "java.lang.String",
+      "sourceType": "com.fangfa.projecttemplate.conf.CustomProperties"
+    }
+  ],
+  "hints": []
+}
