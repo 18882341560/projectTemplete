@@ -2,6 +2,7 @@ package com.fangfa.projecttemplate.controller;
 
 import com.fangfa.projecttemplate.annotation.Operateion;
 import com.fangfa.projecttemplate.bean.User;
+import com.fangfa.projecttemplate.redis.RedisService;
 import com.fangfa.projecttemplate.service.TestService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -24,6 +25,8 @@ public class TestController {
 
     @Autowired
     TestService testService;
+    @Autowired
+    RedisService redisService;
 
     @GetMapping("/a")
     @Operateion("测试操作1")
@@ -43,6 +46,23 @@ public class TestController {
         return null;
     }
 
+
+
+
+    @RequestMapping("/c")
+    public void saveUser(){
+       User user = User.builder()
+                       .username("geLin")
+                       .password("123456")
+                       .build();
+       redisService.set("user-1",user);
+    }
+
+
+    @RequestMapping("/d")
+    public User get(){
+        return (User) redisService.get("user-1");
+    }
 
 
 

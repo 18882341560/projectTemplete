@@ -2,6 +2,8 @@ package com.fangfa.projecttemplate.bean;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,7 +15,9 @@ import java.io.Serializable;
  * @Remarks
  */
 @Data
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 @ApiModel(value = "user",description = "用户对象111")
 public class User implements Serializable {
     private static final long serialVersionUID = 4971633322105113453L;
