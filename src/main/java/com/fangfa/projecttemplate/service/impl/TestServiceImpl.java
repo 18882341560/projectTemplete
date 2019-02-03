@@ -1,6 +1,6 @@
 package com.fangfa.projecttemplate.service.impl;
 
-import com.fangfa.projecttemplate.MyException.MessageException;
+import com.fangfa.projecttemplate.exception.MessageException;
 import com.fangfa.projecttemplate.service.TestService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

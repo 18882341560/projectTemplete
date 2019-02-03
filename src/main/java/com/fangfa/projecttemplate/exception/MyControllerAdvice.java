@@ -1,4 +1,4 @@
-package com.fangfa.projecttemplate.MyException;
+package com.fangfa.projecttemplate.exception;
 
 import com.alibaba.fastjson.JSONObject;
 import com.fangfa.projecttemplate.bean.log.ExceptionLog;
