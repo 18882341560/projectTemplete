@@ -16,18 +16,18 @@ import org.springframework.stereotype.Component;
 public class SimpleTask {
 
 
-    //项目启动就执行一次，每隔5分钟执行一次
-    @Scheduled(fixedDelay = 5 * 60 * 1000)
-    public void removeToken(){
-        System.out.println("测试");
-    }
-
-
-    //项目启动后5秒钟开始执行，每隔5秒执行一次
-    @Scheduled(cron = "0/5 * * * * ?")
-    public void test(){
-        System.out.println("测试");
-    }
+//    //项目启动就执行一次，每隔5分钟执行一次
+//    @Scheduled(fixedDelay = 5 * 60 * 1000)
+//    public void removeToken(){
+//        System.out.println("测试");
+//    }
+//
+//
+//    //项目启动后5秒钟开始执行，每隔5秒执行一次
+//    @Scheduled(cron = "0/5 * * * * ?")
+//    public void test(){
+//        System.out.println("测试");
+//    }
 
 
 }
